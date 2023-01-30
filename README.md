@@ -28,4 +28,13 @@ int main(){
 //reduces the work of writing std.
 ```
 
+Notice that I no longer have to use std
+
+followed by the scope resolution operator
+
+when I refer to cin, cout and endline.
+
+The compiler now knows which one to use based on the using
+
+namespace directive.
 
