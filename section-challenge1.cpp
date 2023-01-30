@@ -1,6 +1,19 @@
 #include <iostream>
 
 int main(){
+
+    // This is a single line comment in C++
+    
+    
+    /*This
+    is 
+    a 
+    multi
+    line
+    commment
+    in 
+    c++*/
+
     int fav_num;
     std::cout<<"Enter your fav number between 1-100\n";
     std::cin>>fav_num;
