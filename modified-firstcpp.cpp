@@ -7,4 +7,8 @@ int main(){
     cin>>fav_num;
     cout<<"Amazing,Thats my fav number too!";
     return 0;
+
+    // //note:
+    // cout<<"hello"<<"world!";
+    //works as well!
 }
