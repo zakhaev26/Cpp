@@ -161,12 +161,23 @@ Array is a compound data structure which is a collection of elements present in 
 note that the elemetns are of same type and and each elements can be accessed directly.
 - Very efficient.
 
-
 ```
 int test_scores [5];
 
 double marks [20];
 
 const int xyz [34];
+
+```
+
+- initialization:
+
+```
+int test_scores [5] {1,4,5,6,9};
+
+double marks [20] {0} ;//init all to zero
+
+const int xyz [] {3,4,6,6};//auto fixes the size by itself ,just like C
+
 
 ```
