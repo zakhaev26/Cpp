@@ -70,8 +70,21 @@ It's possible that the extraction operator could fail:
 For example, suppose you want to read an integer and the user enters my name Soubhik.In this case, the operation fails and the data will have an undetermined value.(Garbage)
 
 
+-imp note:
+```
+    int a;
+    float b;
 
+    cout<<"Enter a integer:\n";
+    cin>>a;
+    cout<<"Enter a floating number:\n";
+    cin>>b;
+    cout<<"Your a = \n"<<a<<"Your b= "<<b;
 
+```
 
+here,if you put a floating number in int variable,the program would show that a = [num] and b ={num}
+
+i.e. it floors and ceils AUTOMATICALLY! 
 
 
