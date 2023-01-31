@@ -155,17 +155,18 @@ Literal Constants:-->
 ```
 
 
+# Arrays and Vectors:
+
+Array is a compound data structure which is a collection of elements present in a contiguous memory location.
+note that the elemetns are of same type and and each elements can be accessed directly.
+- Very efficient.
 
 
+```
+int test_scores [5];
 
+double marks [20];
 
+const int xyz [34];
 
-
-
-
-
-
-
-
-
-
+```
