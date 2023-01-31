@@ -12,6 +12,7 @@ cout<<"long ="<<sizeof(long)<<endl;
 
 cout<<"long long ="<<sizeof(long long)<<endl;
 
+//
 
 cout<<"min val char = "<<CHAR_MIN<<endl;
 cout<<"min val INT = "<<SHRT_MIN<<endl;

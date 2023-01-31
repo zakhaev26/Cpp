@@ -128,7 +128,31 @@ here,if you remove the main declared var, then the comopiler will take the globa
 The c++ ```include file climits``` contains information about the size and precision of the data types for your specific compiler.
 
 
+```
+const int age{21};//constant in cpp
 
+age++
+cout<<age;//throws error..
+
+
+```
+
+
+
+```
+Literal Constants:-->
+
+\n ==newline 
+\t ==tabline
+\r == return 
+\b ==backspace
+\' ==single quote
+\" ==double quote
+\\ == backslash
+
+
+
+```
 
 
 
