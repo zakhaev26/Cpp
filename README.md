@@ -88,3 +88,60 @@ here,if you put a floating number in int variable,the program would show that a 
 i.e. it floors and ceils AUTOMATICALLY! 
 
 
+#Declaring variables in cpp;
+
+```
+int age;//uninitialized
+int age  =21; //C++ Like initialization
+int age (21); //Constructor initialization
+int age {21}; //C++11 list initialization syntax
+
+```
+NOTE:It is recommended to use the last type of initialization in programs of cpp.
+
+
+-Global scoped Variables:
+
+These are variable which are declared globally ,i.e outside of the main function so that it can be accessed in it when INTERNALLY the ame variable is initialized inside the main function.
+
+```
+#include<iostream>
+
+int age =16;
+int main()
+{
+
+    // int age =18;
+    std::cout<<"the age is ="<<age;
+
+
+
+
+    return 0;
+}
+```
+
+
+here,if you remove the main declared var, then the comopiler will take the global variable in order to output age.
+
+
+The c++ ```include file climits``` contains information about the size and precision of the data types for your specific compiler.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
