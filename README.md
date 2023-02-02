@@ -181,3 +181,19 @@ const int xyz [] {3,4,6,6};//auto fixes the size by itself ,just like C
 
 
 ```
+
+Note: in c++ >14 vers, array init is a bit different and rules et are varied.although you can check up on online websites for any learning purposes while working over different versions of cpp as the version i am using to learn cpp is c++ 6.3.0...
+
+# Multi Dimensional Arrays:
+
+
+in cpp,you can create nulti dimensional arrays which are like ,you can say, a matrix of a 1D dimension.
+
+declaration method:
+
+```
+int arr[2][3] {{}};
+string arr[3][7] 
+
+```
+an example is inroduced in code repository.
