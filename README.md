@@ -197,3 +197,37 @@ string arr[3][7]
 
 ```
 an example is inroduced in code repository.
+
+
+Vector:
+
+- must include ```#include<vector>``` file 
+
+## Initialization type 1:
+
+```vector <char> vowels(10);```// automatically sets up a vector named vowels of size 10 and and initializes to automatically to 0.
+
+```vector <int>  test_scores(10);```//automatically sets up a vector named vowels of size 10 and and initializes to automatically to 0.
+
+## Initialization type 2:
+
+```vector<char> vowels {'a','e','i','o','u'};```
+
+```vector<int> test_scores {100,89,98,45,};```
+
+```vector<double> hi_temp (365,80.0);```//makes a vector of type double and name hi_temp of size 365 and initializes all 365 values to 80.0;
+
+## Advantages of Using Vectors:
+
+- Dynamic Sizes
+- Elements are all the same type
+- Stored in contiguously memory locations.
+- [  ] -no checking to see if you are out of bounds
+- provides many useful functions to operate on vectors.
+
+
+-Elements are already initialized to Zero.(doesnt work like this on arrays.)
+-Very Efficient.
+-Iteration (looping) is often used to process.
+
+
