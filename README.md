@@ -230,4 +230,13 @@ Vector:
 -Very Efficient.
 -Iteration (looping) is often used to process.
 
+### What if you're out of bounds:
 
+- Arrays never do bounds checking.
+- Many vector methods do boundary checking.
+- An exception and error message is encountered
+``` 
+vector<int> number {12,34,56,67,78,89};
+number.size();
+//returns size of the vector number;
+```
