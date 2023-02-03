@@ -245,7 +245,7 @@ number.size();
 ### Examples of  2d Vectors:
 
 ```
-vector <ventor<int>> movie_ratings
+vector <vector<int>> movie_ratings
 {
     {1,2,3,4},
     {5,6,7,8},
