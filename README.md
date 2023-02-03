@@ -202,6 +202,7 @@ an example is inroduced in code repository.
 Vector:
 
 - must include ```#include<vector>``` file 
+- must plug in ```using namespace std; ``` as vector is a standard libary.
 
 ## Initialization type 1:
 
@@ -239,4 +240,23 @@ Vector:
 vector<int> number {12,34,56,67,78,89};
 number.size();
 //returns size of the vector number;
+```
+
+### Examples of  2d Vectors:
+
+```
+vector <ventor<int>> movie_ratings
+{
+    {1,2,3,4},
+    {5,6,7,8},
+    {9,10,11,12},
+    {13,14,15,16}
+};
+
+
+//accesing:
+
+cout<<"My(Judge no.1) Movie Ratings for #1 is:"<<movie_ratings.at(0).at(0);
+cout<<"My(Judge no.2) Movie Ratings for #4 is:"<<movie_ratings.at(1).at(3);
+
 ```
