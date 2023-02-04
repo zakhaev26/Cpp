@@ -260,3 +260,115 @@ cout<<"My(Judge no.1) Movie Ratings for #1 is:"<<movie_ratings.at(0).at(0);
 cout<<"My(Judge no.2) Movie Ratings for #4 is:"<<movie_ratings.at(1).at(3);
 
 ```
+
+
+
+# Difference between pre-increment and post increment operators!
+
+## (same logic with pre-dec and post-dec ops):
+
+
+```
+int number {10};
+
+number++;
+cout<<number<<endl;//returns 11
+
+++number;
+cout<<number<<endl;//returns 12
+
+
+//here,both the operators seem to work like they're same.
+```
+
+
+```
+int number {10};
+
+int result;
+
+result =number++;
+cout<<result<<endl;//prints 10
+
+//value of number changed to 11 in ram...
+
+result =++number;
+cout<<result<<endl; //prints 12;
+//value of number is FIRST INCREMENT then ASSIGNED to result.
+
+//here,you can see the difference!
+```
+
+
+# COERSION:-->
+C++ is very consistent with its application of an operator to operands.
+
+
+The operands must be of the same type.
+
+## It's very important to understand the rules that c++ uses to ensure that the types are the same since the results of the calculation could be different depending on which operand type is changed.
+- C++ will try to convert one of the operands so it matches the other.In many cases, this happens automatically, and we'll talk about how that works in the next slide.If an automatic conversion or coercion is not possible,
+then a compiler error will occur.
+- We saw an example of this in the assignment operator video when we tried to assign a string to an integer.
+- In order to understand how these conversions happen,we need to understand higher versus lower types.
+- The idea is simple.The lower types are those types that can hold smaller values and the higher types can hold larger values. 
+- So a long double is of higher type than a long and a long is of higher type than an int.
+- The idea is that we can typically convert from a lower type to a larger type automatically since the lower types value will fit into the higher types value but the opposite may not be true.
+- Short and character types are always converted to integers.So let's learn the terminology.A type conversion is also called a coercion
+
+
+## example:
+
+```
+int total_amount {100};
+int total_number {8};
+double average {0.0};
+
+average =total_amount/total_number;//returns 12 and NOT 12.5.
+
+//Reason:the total_number and total_amount ,both are of integer type,so the compiler will perform integer division and store the value of 12 in average.the 0.5 is hence TRUNCATED...
+
+//PERFORMING COERSION:
+
+average =static_cast<double>(total_amount)/(total_number);//displays 12.5 now....
+
+```
+
+## syntax: ```static_cast<data type>```
+
+
+tip:
+
+another way of taking multiple inputs from user in cpp is:
+
+```
+int a{},b{},c{};
+cout<<"Enter three numbers separated side by side with spaces in between"<<endl;
+cin>>a>>b>>c;
+```
+this works this way as well :p
+
+
+### bool related tip:
+Sometimes it's handy to display the words true and false rather than 1 and 0 in the output statements.
+
+We can do that using the ```boolalpha stream manipulator```.```Boolalpha ```and ```noboolalpha``` are located in the standard namespace.Once you use them, all Boolean output to the stream will result in the words true and false being displayed, that can be pretty handy.
+
+If you want to go back to the default of zero and one, just use no bool alpha.
+
+eg:--->
+
+```
+bool result{false};
+
+result = (100==50+50);//true or 1
+result = (200!=200);//false or 0
+
+cout<<result//returns 0 or 1 depending on the statements..
+cout<<std::boolalpha 
+```
+
+NOTE: if we are storing 12.0 and 11.99999999999999999999999 as doubles and check for their equality, the computer will store them as approximated numbers and to it these two number are same..hence to build high level precision programs or to create code for which 12.0 != 11.99999999999,we use some specific libraries made for it,which we will learn afterwards.
+
+
+
