@@ -15,7 +15,7 @@ int main(){
 
     cin>>userint;
 
-    bool result =(userint>=bound_lower)&&(userint<bound_upper);
+    bool result =(userint>=bound_lower)&&(userint<bound _upper);
 
     cout<<"Is "<<userint<<" within range = "<<result;
 
