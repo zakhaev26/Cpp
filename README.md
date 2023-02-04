@@ -371,4 +371,15 @@ cout<<std::boolalpha
 NOTE: if we are storing 12.0 and 11.99999999999999999999999 as doubles and check for their equality, the computer will store them as approximated numbers and to it these two number are same..hence to build high level precision programs or to create code for which 12.0 != 11.99999999999,we use some specific libraries made for it,which we will learn afterwards.
 
 
+## logical operators:
+
+you can use logical ops as syntax is given below:
+
+- AND: ```and``` , ```&&``` this is a binary operator
+- OR: ```or``` ,```||```this is a binary operator
+- NOT:```not ```,```!```this is a unary operator
+
+- precedence(priority): not > and > or 
+
+
 
