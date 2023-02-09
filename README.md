@@ -381,5 +381,98 @@ you can use logical ops as syntax is given below:
 
 - precedence(priority): not > and > or 
 
+## Compound operators example: lhs += rhs, lhs *=rhs ,lhs<<=rhs,lhs|=rhs,etc
 
 
+# Control Flow Program
+- sequence
+- decision making
+- iteration
+
+# Selection Decision Making-->
+
+- if-else
+- if
+- Nested if statements
+- switch statements
+- ?  : ternary operator if else statements(in a short hand version)
+
+
+
+# Looping
+
+- for loops
+- while loops
+- do-while loops
+- continue and breaks
+- Nested loops
+- infinite loops
+
+
+An enumeration is a user-defined data type that consists of integral constants. To define an enumeration, keyword enum is used.
+
+```
+#include <iostream>
+using namespace std;
+
+enum week { Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };
+
+int main()
+{
+    week today;
+    today = Wednesday;
+    cout << "Day " << today+1;
+    return 0;
+}```
+
+this above code returns Thursday.
+
+
+
+# Range based for loops:
+```#include <iostream>
+#include <vector>
+using namespace std;
+
+int main(void)
+{
+
+    int scores[]{12, 23, 34, 45, 89};
+    // the "mark" variable sets itself onto the base address of the array and then it just goes on until the array exhausts.In this way the loop looks easy and less prone to error.
+    for (int mark : scores)
+    {
+        cout << mark << endl;
+    }
+
+    cout << endl;
+    // also works in vectors!
+    vector<int> numbers{1, 23, 45, 6, 70};
+
+    for (int numero : numbers)
+    {
+        cout << numero << endl;
+    }
+
+    return 0;
+}
+```
+NOTE:We can also use the ```auto``` keyword instead of int or double while setting up the RBFL.
+
+Rounding up library:
+
+```#include<iomanip>
+.
+.
+.
+.
+cout<<fixed<<setprecision(1)
+```
+
+gets you rounded up form of number upto 1 place.
+
+
+eg:
+
+for(auto c:{This is a string}){
+    cout<<c;
+}
