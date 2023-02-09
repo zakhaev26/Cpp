@@ -16,7 +16,7 @@ int main(void)
     // also works in vectors!
     vector<int> numbers{1, 23, 45, 6, 70};
 
-    for (int numero : numbers)
+    for (auto numero : numbers)
     {
         cout << numero << endl;
     }
