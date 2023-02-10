@@ -476,3 +476,11 @@ eg:
 for(auto c:{This is a string}){
     cout<<c;
 }
+
+# Characters and strings:
+
+ These are the functions that we can use with characters.
+This cctype library includes very simple and very useful function that allow the testing of characters for various properties as well as the conversion of characters from upper to lower or lower to uppercase.
+```#include<cctype>```
+In order to use these functions, you must include cctype.The functions all expect a single character.In the case of the testing functions, they evaluate to true or false.And the conversion functions return the converted character.
+
