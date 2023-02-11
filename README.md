@@ -477,10 +477,211 @@ for(auto c:{This is a string}){
     cout<<c;
 }
 
-# Characters and strings:
+# Characters:
 
  These are the functions that we can use with characters.
 This cctype library includes very simple and very useful function that allow the testing of characters for various properties as well as the conversion of characters from upper to lower or lower to uppercase.
 ```#include<cctype>```
 In order to use these functions, you must include cctype.The functions all expect a single character.In the case of the testing functions, they evaluate to true or false.And the conversion functions return the converted character.
 
+# Strings:
+
+- C-style strings are stored in contiguous in memory
+- implemented as an array of characters.
+- terminated by a null character(null{null character with a value of zero})
+- Zero or nul terminated strings.
+
+## string literal:
+- sequence of characters in double quotes,e.g:"Frank".
+```F r a n k \0```
+- constant
+- terminated with null characters.
+
+
+```
+char array [10] {};
+
+array ="Soubhik"
+``` 
+throws an error.
+as the compiler searches for a null character in the string and as you have already initialized it to zero by giving the {} thing,even if you try to insert a string externally,it will fail.
+instead of this,you can use rhe strcpy fxn from cstrings library.
+some of the common  functions present in cstrings library are:
+1)strlen(string_Name)
+2)strcpy(where,string New)
+3)strcmp(string1,string 2)
+4)strcat(string_1 ,+string _2)
+
+note:cstdlib is a library which allows us to convert a string to different data_types (if possible):
+
+```cin.getline(full_name,50) ``` is similar to ```fgets``` in Clang.
+
+# C++ style strings-->
+
+- In order to use c++ plus strings, you must include the string header file.
+
+- Strings are in the standard namespace.So in order to use them without using namespace standard, you must prefix them with standard and the scope resolution operator.This is also true for the standard string methods that work with c++ strings.
+
+- Like c-style strings, c++ strings are stored contiguously in memory.However, unlike c-style strings which are fixed in size, c++ strings are dynamic and can grow and shrink as needed at runtime.
+
+- C++ strings work with the stream insertion and extraction operators just like most other types in c++.
+
+- The c++ string class provides a rich set of methods or functions that allow us to manipulate strings easily.Chances are that if you need to do something with the string that functionality is already there for you without having to rewrite it from scratch.
+
+- C++ strings also work with most of the operators that we're used to for assigning, comparing and so forth.This is a huge advantage over c-style strings since c-style strings don't work well with those operators.
+
+- Even though c++ strings are preferred in most cases sometimes you need to use c-style strings.
+Maybe you're interfacing with a library that's been optimized for c-style strings. Well, in this use case, you can still use c++ strings and take advantage of them.And when you need to you can easily convert the c++ string into a c-style string and back again.
+
+- Like vectors, c++ strings are safer since they provide methods that can perform bounds check and allow you to find errors in your code so you can fix them before your program goes into production.
+
+
+```
+#include<string>
+.
+.
+.
+string s1 {"hello"};
+string s2 =s1;
+string s2 ={"Morbius"};
+s1==s2 
+
+```
+```
+string s1 {"Hello"};
+string s2 {"world"};
+
+cout<< s1+" " +s2; //Hello World
+
+//but...
+
+cout<< "Hello"+ " World"; //throws error as it is a c style string and this type of string cant perform c++ type operations.
+
+```
+
+
+note: std::npos means the word that you're trying to retreive isnt present in the object string.
+
+
+# All string functions:
+
+- getline()	This function is used to store a stream of characters as entered by the user in the object memory.
+- push_back()	This function is used to input a character at the end of the string.
+- pop_back()	Introduced from C++11(for strings), this function is used to delete the last character from the string.
+
+```
+/ C++ Program to demonstrate the working of
+// getline(), push_back() and pop_back()
+#include <iostream>
+#include <string> // for string class
+using namespace std;
+ 
+// Driver Code
+int main()
+{
+    // Declaring string
+    string str;
+ 
+    // Taking string input using getline()
+    getline(cin, str);
+ 
+    // Displaying string
+    cout << "The initial string is : ";
+    cout << str << endl;
+ 
+    // Inserting a character
+    str.push_back('s');
+ 
+    // Displaying string
+    cout << "The string after push_back operation is : ";
+    cout << str << endl;
+ 
+    // Deleting a character
+    str.pop_back();
+ 
+    // Displaying string
+    cout << "The string after pop_back operation is : ";
+    cout << str << endl;
+ 
+    return 0;
+}
+```
+- capacity():	This function returns the capacity allocated to the string, which can be equal to or more than the size of the string. Additional space is allocated so that when the new characters are added to the string, the operations can be done efficiently.
+
+- resize():	This function changes the size of the string, the size can be increased or decreased.
+
+- length(): This function finds the length of the string.
+
+- shrink_to_fit():	This function decreases the capacity of the string and makes it equal to the minimum capacity of the string. This operation is useful to save additional memory if we are sure that no further addition of characters has to be made.
+
+```
+// C++ Program to demonstrate the working of
+// capacity(), resize() and shrink_to_fit()
+#include <iostream>
+#include <string> // for string class
+using namespace std;
+ 
+// Driver Code
+int main()
+{
+    // Initializing string
+    string str = "geeksforgeeks is for geeks";
+ 
+    // Displaying string
+    cout << "The initial string is : ";
+    cout << str << endl;
+ 
+    // Resizing string using resize()
+    str.resize(13);
+ 
+    // Displaying string
+    cout << "The string after resize operation is : ";
+    cout << str << endl;
+ 
+    // Displaying capacity of string
+    cout << "The capacity of string is : ";
+    cout << str.capacity() << endl;
+ 
+    // Displaying length of the string
+    cout << "The length of the string is :" << str.length()
+         << endl;
+ 
+    // Decreasing the capacity of string
+    // using shrink_to_fit()
+    str.shrink_to_fit();
+ 
+    // Displaying string
+    cout << "The new capacity after shrinking is : ";
+    cout << str.capacity() << endl;
+ 
+    return 0;
+}
+
+OUTPUT >>>
+
+The initial string is : geeksforgeeks is for geeks
+The string after resize operation is : geeksforgeeks
+The capacity of string is : 26
+The length of the string is :13
+The new capacity after shrinking is : 13
+
+```
+## ITERATOR FUNCTIONS:
+
+- begin()	This function returns an iterator to the beginning of the string.
+- end()	This function returns an iterator to the next to the end of the string.
+- rbegin()	This function returns a reverse iterator pointing at the end of the string.
+- rend()	This function returns a reverse iterator pointing to the previous of beginning of the string.
+- cbegin()	This function returns a constant iterator pointing to the beginning of the string, it cannot be used to modify the contents it points-to.
+- cend()	This function returns a constant iterator pointing to the next of end of the string, it cannot be used to modify the contents it points-to.
+- crbegin()	This function returns a constant reverse iterator pointing to the end of the string, it cannot be used to modify the contents it points-to.
+- crend()	This function returns a constant reverse iterator pointing to the previous of beginning of the string, it cannot be used to modify the contents it points-to.
+
+eg in gfg..
+
+## Manipulation functions :
+
+- copy(“char array”, len, pos) 	This function copies the substring in the target character array mentioned in its arguments. It takes 3 arguments, target char array, length to be copied, and starting position in the string to start copying.
+- swap()	This function swaps one string with another
+
+NOTE:In order to use C style strings ,one needs to include ```#include<cstrings>``` file.
