@@ -516,6 +516,36 @@ note:cstdlib is a library which allows us to convert a string to different data_
 
 ```cin.getline(full_name,50) ``` is similar to ```fgets``` in Clang.
 
+```include <iostream>
+
+#include<string.h>
+
+using namespace std;
+
+int main(){
+
+    string user_name; // declaring variable
+
+    // taking user input with cin
+
+    std::cout << "What is your name? :" << std::endl; 
+
+    // using getline
+
+    getline(cin, user_name);
+
+    cout<<"\nWelcome to Simplilearn "<<user_name;
+
+    return 0;
+
+}
+```
+
+Output:
+
+
+
+
 # C++ style strings-->
 
 - In order to use c++ plus strings, you must include the string header file.
