@@ -3,7 +3,7 @@
 --------------------------------------------
 
 - Using namespace directives helps us ease out the tedious job to write std:: again and again.
-note: th ```::``` operator is known as scope resolution Operator and is used with std ,or the Standard namespace library.
+note: the ```::``` operator is known as scope resolution Operator and is used with std ,or the Standard namespace library.
 Third party librarie may have their own way of declaring variables which we might use so in order to prevent that we use namespace.
 
 ```
@@ -92,7 +92,7 @@ i.e. it floors and ceils AUTOMATICALLY!
 
 ```
 int age;//uninitialized
-int age  =21; //C++ Like initialization
+int age  =21; //C Like initialization
 int age (21); //Constructor initialization
 int age {21}; //C++11 list initialization syntax
 
