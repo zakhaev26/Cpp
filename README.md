@@ -298,7 +298,7 @@ cout<<result<<endl; //prints 12;
 
 //here,you can see the difference!
 ```
-
+gitcom
 
 # COERSION:-->
 C++ is very consistent with its application of an operator to operands.
